@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -8,6 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
   @Input() isChecked: boolean = false;
   @Input() itemName: string = '';
+  @Output() checkboxChanged = new EventEmitter();
 
+  onCheckboxChange() {
+    this.checkboxChanged.emit();
+  }
   ngOnInit(): void {}
 }
