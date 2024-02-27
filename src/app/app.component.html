@@ -1,7 +1,10 @@
 
 <div class="container">
   <app-header></app-header>
-  <app-list></app-list>
+  <app-input [list]="todoList" ></app-input>
+  <div class="listComponent" *ngFor="let item of todoList; let i = index">
+    <app-list [isChecked]=(item.isDone) [itemName]="item.title" (checkboxChanged)="toggleCheckBox(i)"></app-list>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
