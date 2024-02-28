@@ -8,6 +8,7 @@ import { ListComponent } from './components/list/list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { InputComponent } from './components/input/input.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, ListComponent, InputComponent],
@@ -17,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatIconModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

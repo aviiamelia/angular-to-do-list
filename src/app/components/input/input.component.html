@@ -1,5 +1,5 @@
-<div class="inputContainer">
-  <input type="text" (keyup)="onKey($event)">
-  <button (click)="addNewItem()">Add</button>
-</div>
+<form (ngSubmit)="addNewItem($event)" class="inputContainer">
+  <input type="text" id="todolist" name="todolist" [(ngModel)]="formData.todolist">
+  <button type="submit" type="submit" (click)="addNewItem($event); $event.preventDefault()">Add</button>
+</form>
 

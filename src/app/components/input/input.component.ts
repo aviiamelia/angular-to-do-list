@@ -8,12 +8,10 @@ import { Item } from 'src/app/types/list';
 })
 export class InputComponent implements OnInit {
   @Input() list: Item[] = [];
-  inputValue: string = '';
-  onKey(event: Event) {
-    this.inputValue = (event.target as HTMLInputElement).value;
-  }
-  addNewItem() {
-    const item = { title: this.inputValue, isDone: false };
+  formData = { todolist: '' };
+  addNewItem(event: Event) {
+    event.preventDefault();
+    const item = { title: this.formData.todolist, isDone: false };
     this.list.push(item);
   }
   constructor() {}
