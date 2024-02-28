@@ -13,4 +13,9 @@ export class AppComponent {
     this.todoList[index].isDone = !this.todoList[index].isDone;
     console.log(this.todoList);
   }
+  onDelete(index: number) {
+    const found = this.todoList.find((_, itemindex) => itemindex === index);
+    const newList = this.todoList.filter((item) => item !== found);
+    this.todoList = newList;
+  }
 }

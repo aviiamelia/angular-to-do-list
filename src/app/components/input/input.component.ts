@@ -13,6 +13,7 @@ export class InputComponent implements OnInit {
     event.preventDefault();
     const item = { title: this.formData.todolist, isDone: false };
     this.list.push(item);
+    this.formData.todolist = '';
   }
   constructor() {}
 
