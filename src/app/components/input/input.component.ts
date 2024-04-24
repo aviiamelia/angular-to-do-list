@@ -14,7 +14,6 @@ export class InputComponent implements OnInit {
     const item = { title: this.formData.todolist, isDone: false };
     this.list.push(item);
     this.formData.todolist = '';
-    //test
   }
   constructor() {}
 
