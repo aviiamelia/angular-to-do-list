@@ -3,7 +3,7 @@
   <app-header></app-header>
   <app-input [list]="todoList" ></app-input>
   <div class="listComponent" *ngFor="let item of todoList; let i = index">
-    <app-list [isChecked]=(item.isDone) [itemName]="item.title" (checkboxChanged)="toggleCheckBox(i)"></app-list>
+    <app-list [isChecked]=(item.isDone) [itemName]="item.title" (checkboxChanged)="toggleCheckBox(i)" (onDelete)="onDelete(i)"></app-list>
   </div>
 </div>
 

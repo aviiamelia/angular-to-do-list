@@ -2,4 +2,5 @@
 <div class="list-container">
   <input type="checkbox" class="checkbox" [checked]="isChecked" (change)="onCheckboxChange()" />
   <p class="item">{{itemName}}</p>
+  <mat-icon class="delete-icon" (click)="onListDelete()">delete</mat-icon>
 </div>

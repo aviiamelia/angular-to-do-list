@@ -9,9 +9,13 @@ export class ListComponent implements OnInit {
   @Input() isChecked: boolean = false;
   @Input() itemName: string = '';
   @Output() checkboxChanged = new EventEmitter();
+  @Output() onDelete = new EventEmitter();
 
   onCheckboxChange() {
     this.checkboxChanged.emit();
+  }
+  onListDelete() {
+    this.onDelete.emit();
   }
   ngOnInit(): void {}
 }
